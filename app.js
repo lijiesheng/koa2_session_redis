@@ -11,6 +11,8 @@ const session = require('koa-generic-session')
 const index = require('./routes/index')
 const users = require('./routes/users')
 
+
+app.keys = ['my name is huangshimei']
 app.use(session({
   key: 'weibo.sid',   //  cookie key 默认值是 'koa.sid'
   prefix: 'weibo.sess:', // redis key 的前缀，默认是 weibo.sess:
